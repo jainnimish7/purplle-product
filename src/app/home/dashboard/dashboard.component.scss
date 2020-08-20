@@ -1,0 +1,106 @@
+@import '../../shared/scss/variables';
+
+/**********Dashboard css page**********/
+
+.email-section {
+  padding: 60px 0;
+}
+
+.email-text {
+  p {
+    color: $royal-blue;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 50px;
+    color: $royal-blue;
+  }
+}
+
+.draft-section h2 {
+  color: $royal-blue;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.email-text p:last-child {
+  font-size: 25px;
+  font-family: spartan_mbsemibold;
+}
+
+.draft-section {
+  text-align: center;
+  background: $white;
+  padding-top: 50px;
+  padding-bottom: 80px;
+
+  p.head-p {
+    font-size: 25px;
+    font-family: spartan_mbsemibold;
+  }
+}
+
+.fantasy-games {
+  width: 100%;
+  display: inline-block;
+
+  .col-md-6 {
+    padding: 0 40px;
+  }
+}
+
+.game-block {
+  box-shadow: 2px 21px 23px 8px rgba(10, 20, 68, 0.4);
+  border-radius: 25px;
+  padding: 50px;
+  height: 420px;
+  margin-top: 50px;
+
+  img {
+    width: 180px;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 22px;
+    font-family: spartan_mbsemibold;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .email-text h2,
+  .draft-section h2 {
+    font-size: 40px;
+  }
+
+  .game-block {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .email-text h2,
+  .draft-section h2 {
+    font-size: 25px;
+  }
+
+  .email-text p:last-child {
+    font-size: 20px;
+  }
+
+  .draft-section p.head-p {
+    font-size: 20px;
+  }
+
+  .game-block {
+    padding: 15px;
+    height: auto;
+
+    img {
+      width: 130px;
+    }
+  }
+}

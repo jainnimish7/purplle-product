@@ -1,0 +1,18 @@
+<section class="product-section">
+  <div class="left-block">
+    <div class="search-box">
+      <label>Search</label>
+      <input type="text" class="form-control" [(ngModel)]="searchKeyword" (ngModelChange)="search()" name="search"
+        placeholder="Search">
+      <i class="fa fa-search"></i>
+    </div>
+    <div class="create-product">
+      <a href="javascript:void(0)" routerLink="/product/new">Create Product</a>
+    </div>
+  </div>
+  <div class="middle-block">
+    <div class="list-block">
+      <app-listing [productsList]="productsList"></app-listing>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+<mat-grid-list cols="3" *ngIf="productsList.length">
+  <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let product of productsList">
+    <div class="pd-10">
+      <h3 class="product-name">{{product.name}}</h3>
+      <div>
+        <p>Description: {{product.description}}</p>
+        <span>{{product.brand}}</span>
+        <br>
+        <div class="bottom-section">
+          <b>Price: ${{product.price}}</b>
+          <button class="action-icon" mat-icon-button [matMenuTriggerFor]="menu" *ngIf="userId == product.user_id">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu" xPosition="before">
+            <button mat-menu-item (click)="deleteProduct(product.product_id)">
+              <span>Delete</span>
+              <mat-icon>delete</mat-icon>
+            </button>
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+<p *ngIf="!productsList.length"> No Product found</p>

@@ -1,0 +1,21 @@
+<div [ngClass]="{'inner-body-page': isBlueBackground}">
+  <section>
+    <div [ngClass]="{'banner-bg': isDashboardRoute}">
+      <div class="container pad-none">
+        <app-header></app-header>
+      </div>
+      <div class="row" *ngIf="isDashboardRoute">
+        <div class="col-md-5 col-sm-5">
+        </div>
+        <div class="banner-image">
+          <img src="assets/images/banner-image.png">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <router-outlet></router-outlet>
+
+  <app-footer></app-footer>
+
+</div>

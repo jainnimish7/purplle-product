@@ -1,0 +1,123 @@
+@import "../shared/scss/variables";
+
+.product-section {
+  display: inline-block;
+  min-height: 450px;
+  padding-bottom: 4rem;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.left-block {
+  background: $white;
+  border-radius: 15px;
+  float: left;
+  padding: 15px 25px;
+  padding-top: 25px;
+  width: 300px;
+}
+
+.create-product {
+  a {
+    background: $light-grey;
+    border-radius: 25px;
+    color: $midnight-blue;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 46px 8px 8px;
+  }
+}
+
+.search-box {
+  label {
+    color: $midnight-blue;
+  }
+
+  input {
+    background: $light-grey;
+    border: 0;
+    border-radius: 25px;
+    box-shadow: none;
+    position: relative;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  position: relative;
+  margin-bottom: 15px;
+
+  i {
+    color: $black;
+    position: absolute;
+    right: 15px;
+    top: 35px;
+  }
+}
+
+.middle-block {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(100% - 330px);
+
+  .list-block {
+    background: $white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 12px 30px;
+
+    h3 {
+      font-family: "spartan_mbblack";
+      font-weight: bold;
+    }
+
+    .pd-10 {
+      padding: 10px;
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1100px) {
+  .left-block {
+    width: 250px;
+  }
+
+  .middle-block {
+    width: calc(100% - 270px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .left-block {
+    width: 220px;
+  }
+
+  .middle-block {
+    width: calc(100% - 240px);
+  }
+
+  ul.user-name.nav.navbar-right {
+    background: transparent;
+    padding: 10px 0;
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  .left-block {
+    width: 100%;
+  }
+
+  .product-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .middle-block {
+    margin: 15px 0;
+    width: 100%;
+  }
+}
